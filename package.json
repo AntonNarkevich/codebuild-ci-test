@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha *.spec.js"
+    "test": "nyc --reporter=lcov mocha *.spec.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/AntonNarkevich/codebuild-ci-test#readme",
   "dependencies": {
     "mocha": "^3.4.2"
+  },
+  "devDependencies": {
+    "nyc": "^11.0.3"
   }
 }
