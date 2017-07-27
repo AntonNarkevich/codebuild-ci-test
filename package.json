@@ -1,0 +1,22 @@
+{
+  "name": "codebuild-ci-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonNarkevich/codebuild-ci-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonNarkevich/codebuild-ci-test/issues"
+  },
+  "homepage": "https://github.com/AntonNarkevich/codebuild-ci-test#readme",
+  "dependencies": {
+    "mocha": "^3.4.2"
+  }
+}
