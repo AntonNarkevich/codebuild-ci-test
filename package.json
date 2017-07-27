@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=lcov mocha *.spec.js"
+    "test": "nyc --reporter=lcov mocha *.spec.js",
+    "upload-coverage-report": "codecov"
   },
   "repository": {
     "type": "git",
@@ -16,10 +17,10 @@
     "url": "https://github.com/AntonNarkevich/codebuild-ci-test/issues"
   },
   "homepage": "https://github.com/AntonNarkevich/codebuild-ci-test#readme",
-  "dependencies": {
-    "mocha": "^3.4.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "codecov": "^2.2.0",
+    "mocha": "^3.4.2",
     "nyc": "^11.0.3"
   }
 }
