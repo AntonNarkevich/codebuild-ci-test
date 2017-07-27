@@ -15,4 +15,4 @@ phases:
       - npm run upload-coverage-report
   post_build:
     commands:
-      - 'aws sns publish --topic-arn arn:aws:sns:us-east-1:204558006292:CodeBuildCICloudFormationStack --message "{\context"\":\"AWS CodeBuild\", \"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
+      - 'aws sns publish --topic-arn arn:aws:sns:us-east-1:204558006292:CodeBuildCICloudFormationStack --message "{\"context\":\"AWS CodeBuild\", \"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
