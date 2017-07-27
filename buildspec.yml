@@ -1,0 +1,17 @@
+version: 0.2
+
+env:
+  variables:
+    CODECOV_TOKEN: "3628fa70-c99b-4878-8629-7a0daba4241b"
+
+phases:
+  install:
+    commands:
+      - npm install
+      - npm test
+  build:
+    commands:
+      - npm test
+  post_build:
+    commands:
+      - npm run upload-coverage-report
