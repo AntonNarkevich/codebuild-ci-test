@@ -16,4 +16,4 @@ phases:
   post_build:
     commands:
       - npm run upload-coverage-report
-      - 'aws sns publish --topic-arn arn:aws:sns:us-east-1:012345678902:pull-request-builder --message "{\"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
+      - 'aws sns publish --topic-arn arn:aws:sns:us-east-1:204558006292:CodeBuildCICloudFormationStack --message "{\"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
