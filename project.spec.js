@@ -7,6 +7,6 @@ describe('test project', () => {
   });
 
   it('should sum 1 and 2', () => {
-      assert.equal(calculator.sum(1, 3), 1 + 2);
+      assert.equal(calculator.sum(1, 2), 1 + 2);
   });
 });
