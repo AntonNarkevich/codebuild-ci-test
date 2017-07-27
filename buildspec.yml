@@ -9,11 +9,11 @@ phases:
   install:
     commands:
       - npm install
-      - npm test
   build:
     commands:
       - npm test
+      - npm run upload-coverage-report
   post_build:
     commands:
-      - npm run upload-coverage-report
+
       - 'aws sns publish --topic-arn arn:aws:sns:us-east-1:204558006292:CodeBuildCICloudFormationStack --message "{\"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
