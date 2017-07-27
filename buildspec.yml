@@ -3,6 +3,7 @@ version: 0.2
 env:
   variables:
     CODECOV_TOKEN: "3628fa70-c99b-4878-8629-7a0daba4241b"
+    SNS_TOPIC_ARN: "arn:aws:sns:us-east-1:204558006292:CodeBuildCICloudFormationStack"
 
 phases:
   install:
@@ -15,3 +16,4 @@ phases:
   post_build:
     commands:
       - npm run upload-coverage-report
+      - 'aws sns publish --topic-arn arn:aws:sns:us-east-1:012345678902:pull-request-builder --message "{\"buildId\": \"$CODEBUILD_BUILD_ID\"}"'
